@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+/* ---------- Design tokens: change these to re-theme the whole site ---------- */
+@theme {
+  --font-serif: "Marcellus", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-cream: #f6f1e8;
+  --color-sand: #eae0cd;
+  --color-stone: #d3c3a5;
+  --color-ink: #17130e;
+  --color-muted: #6f6455;
+  --color-accent: #b08d57; /* champagne brass */
+  --color-accent-dark: #8f6f3e;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-serif tracking-tight;
+  }
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  }
+}
+
+/* ---------- Hero ambient animation ---------- */
+@keyframes dust {
+  0% { transform: translate(0, 0); opacity: 0; }
+  20% { opacity: 0.85; }
+  100% { transform: translate(var(--dx, 20px), -170px); opacity: 0; }
+}
+@keyframes sway {
+  0%, 100% { transform: skewX(-0.5deg); }
+  50% { transform: skewX(0.8deg); }
+}
+@keyframes beam {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 0.9; }
+}
+@keyframes scrollDot {
+  0% { transform: translate(-50%, 0); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translate(-50%, 14px); opacity: 0; }
+}
+.dust {
+  animation: dust 9s linear infinite;
+  transform-box: fill-box;
+}
+.sway {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  animation: sway 8s ease-in-out infinite;
+}
+.beam {
+  animation: beam 7s ease-in-out infinite;
+}
+.scroll-dot {
+  animation: scrollDot 1.8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dust, .sway, .beam, .scroll-dot {
+    animation: none !important;
+  }
+  .dust { opacity: 0.5; }
+}
+
+@layer components {
+  /* Consistent page width + side gutters */
+  .wrap {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+  /* Consistent vertical rhythm between sections */
+  .section {
+    @apply py-24 sm:py-32;
+  }
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.22em] text-accent;
+  }
+  .h2 {
+    @apply text-4xl leading-[1.08] sm:text-5xl;
+  }
+  .lead {
+    @apply text-base leading-relaxed text-muted sm:text-lg;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition duration-300 ease-out;
+  }
+  .btn-primary {
+    @apply bg-ink text-cream hover:bg-accent;
+  }
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent-dark;
+  }
+  .btn-ghost {
+    @apply border border-ink/20 text-ink hover:border-ink hover:bg-ink hover:text-cream;
+  }
+  .btn-ghost-light {
+    @apply border border-white/30 text-white hover:bg-white hover:text-ink;
+  }
+}
+
+/* ---------- responsive hardening: works on every screen ---------- */
+@viewport {
+  width: device-width;
+}
+
+@layer base {
+  html {
+    /* never allow sideways scroll, no matter what a component does */
+    overflow-x: clip;
+    scroll-padding-top: 84px;
+    /* respect iPhone/Android notches */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    /* stop mobile browsers inflating font sizes */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    overflow-x: clip;
+    /* keep the fixed WhatsApp button clear of the home indicator */
+    padding-bottom: env(safe-area-inset-bottom);
+    /* remove the grey tap flash on mobile */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* media can never overflow its container */
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  /* long emails/addresses wrap instead of breaking the layout */
+  a,
+  p,
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* iOS Safari quirks */
+input,
+textarea,
+select,
+button {
+  font-size: 16px; /* prevents auto-zoom on input focus (iOS zooms below 16px) */
+}
+
+/* fine pointers only: nicer hover, no sticky hover on touch */
+@media (hover: none) {
+  .btn,
+  a {
+    touch-action: manipulation;
+  }
+}
+
+/* small-height landscape phones: let modals scroll instead of clip */
+@media (max-height: 500px) {
+  [role='dialog'] {
+    max-height: 100svh;
+  }
+}
+
+/* the 3D viewer must own touch gestures (drag/pinch), not the page */
+[role='dialog'] canvas {
+  touch-action: none;
+}
