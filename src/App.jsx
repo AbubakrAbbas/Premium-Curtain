@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import WhyUs from "./components/WhyUs";
 import Collection from "./components/Collection";
+import Installations from "./components/Installations";
 import ProductModal from "./components/ProductModal";
 import ViewerModal from "./components/ViewerModal";
 import HowItWorks from "./components/HowItWorks";
@@ -44,11 +45,6 @@ export default function App() {
   }, []);
 
   // "Request Quote": preselect the product and glide to the contact form.
-  // Lenis is paused for the duration of the glide so wheel input can't
-  // interrupt it (the "stops at How It Works" bug on desktop).
-  // "Request Quote": preselect the product and glide to the contact form.
-  // lock: true makes the glide uninterruptible (wheel ticks can't cut it short).
-  // "Request Quote": preselect the product and glide to the contact form.
   // lock: true makes the glide uninterruptible (wheel ticks can't cut it short).
   const requestQuote = useCallback((productName = "") => {
     setInterest(productName);
@@ -64,18 +60,20 @@ export default function App() {
           offset: -84,
           duration: 1.4,
           force: true,
-          lock: true, // ← the correct option: ignores wheel until arrival
+          lock: true,
         });
       } else {
         el.scrollIntoView({ behavior: "smooth" });
       }
     }, 250);
   }, []);
+
   return (
     <MotionConfig reducedMotion="user">
       {introActive && <CurtainIntro onReveal={onReveal} onDone={onIntroDone} />}
       <SmoothScroll enabled={!introActive} />
 
+      {/* the page is inert (not clickable or tabbable) until the intro is finished */}
       <div inert={introActive}>
         <ScrollProgress />
         <a
@@ -90,6 +88,7 @@ export default function App() {
           <Hero ready={revealed} />
           <WhyUs />
           <Collection onOpen={setModalProduct} onView3D={openPreview} />
+          <Installations />
           <HowItWorks />
           <Testimonials />
           <About />

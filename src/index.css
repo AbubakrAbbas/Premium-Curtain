@@ -46,22 +46,48 @@
 
 /* ---------- Hero ambient animation ---------- */
 @keyframes dust {
-  0% { transform: translate(0, 0); opacity: 0; }
-  20% { opacity: 0.85; }
-  100% { transform: translate(var(--dx, 20px), -170px); opacity: 0; }
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate(var(--dx, 20px), -170px);
+    opacity: 0;
+  }
 }
 @keyframes sway {
-  0%, 100% { transform: skewX(-0.5deg); }
-  50% { transform: skewX(0.8deg); }
+  0%,
+  100% {
+    transform: skewX(-0.5deg);
+  }
+  50% {
+    transform: skewX(0.8deg);
+  }
 }
 @keyframes beam {
-  0%, 100% { opacity: 0.55; }
-  50% { opacity: 0.9; }
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.9;
+  }
 }
 @keyframes scrollDot {
-  0% { transform: translate(-50%, 0); opacity: 0; }
-  30% { opacity: 1; }
-  100% { transform: translate(-50%, 14px); opacity: 0; }
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 14px);
+    opacity: 0;
+  }
 }
 .dust {
   animation: dust 9s linear infinite;
@@ -79,10 +105,15 @@
   animation: scrollDot 1.8s ease-in-out infinite;
 }
 @media (prefers-reduced-motion: reduce) {
-  .dust, .sway, .beam, .scroll-dot {
+  .dust,
+  .sway,
+  .beam,
+  .scroll-dot {
     animation: none !important;
   }
-  .dust { opacity: 0.5; }
+  .dust {
+    opacity: 0.5;
+  }
 }
 
 @layer components {
@@ -182,12 +213,20 @@ button {
 
 /* small-height landscape phones: let modals scroll instead of clip */
 @media (max-height: 500px) {
-  [role='dialog'] {
+  [role="dialog"] {
     max-height: 100svh;
   }
 }
 
 /* the 3D viewer must own touch gestures (drag/pinch), not the page */
-[role='dialog'] canvas {
+[role="dialog"] canvas {
   touch-action: none;
+}
+/* before/after slider images: geometry guaranteed regardless of utility generation */
+.ba-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
