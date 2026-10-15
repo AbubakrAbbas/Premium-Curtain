@@ -44,19 +44,25 @@ export default function App() {
   }, []);
 
   // "Request Quote": preselect the product in the contact form and scroll there
+  // "Request Quote": preselect the product in the contact form and glide there
   const requestQuote = useCallback((productName = "") => {
     setInterest(productName);
+    document.body.style.overflow = ""; // unfreeze the page immediately, don't wait for the modal's exit animation
     setModalProduct(null);
     setPreview(null);
     setTimeout(() => {
       const el = document.getElementById("contact");
       if (!el) return;
       if (window.__lenis) {
-        window.__lenis.scrollTo(el, { offset: -84, duration: 1.2 });
+        window.__lenis.scrollTo(el, {
+          offset: -84,
+          duration: 1.2,
+          force: true,
+        });
       } else {
         el.scrollIntoView({ behavior: "smooth" });
       }
-    }, 200); // was 60 — too fast for the modal to finish closing
+    }, 250);
   }, []);
 
   return (

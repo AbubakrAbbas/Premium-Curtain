@@ -34,3 +34,4 @@ Thumbs.db
 
 # TypeScript build info (if you ever add TS)
 *.tsbuildinfo
+**/node_modules/
