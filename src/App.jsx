@@ -43,21 +43,25 @@ export default function App() {
     setPreview({ id, color });
   }, []);
 
-  // "Request Quote": preselect the product in the contact form and scroll there
-  // "Request Quote": preselect the product in the contact form and glide there
+  // "Request Quote": preselect the product and glide to the contact form.
+  // Lenis is paused for the duration of the glide so wheel input can't
+  // interrupt it (the "stops at How It Works" bug on desktop).
   const requestQuote = useCallback((productName = "") => {
     setInterest(productName);
-    document.body.style.overflow = ""; // unfreeze the page immediately, don't wait for the modal's exit animation
+    document.body.style.overflow = "";
     setModalProduct(null);
     setPreview(null);
     setTimeout(() => {
       const el = document.getElementById("contact");
       if (!el) return;
-      if (window.__lenis) {
-        window.__lenis.scrollTo(el, {
+      const lenis = window.__lenis;
+      if (lenis) {
+        lenis.stop(); // ignore wheel/touch during the glide
+        lenis.scrollTo(el, {
           offset: -84,
-          duration: 1.2,
+          duration: 1.4,
           force: true,
+          onComplete: () => lenis.start(), // re-enable on arrival
         });
       } else {
         el.scrollIntoView({ behavior: "smooth" });
@@ -66,13 +70,10 @@ export default function App() {
   }, []);
 
   return (
-    // respects the visitor's "reduce motion" setting automatically
     <MotionConfig reducedMotion="user">
       {introActive && <CurtainIntro onReveal={onReveal} onDone={onIntroDone} />}
-      {/* buttery inertia scrolling — disabled while the intro plays */}
       <SmoothScroll enabled={!introActive} />
 
-      {/* the page is inert (not clickable or tabbable) until the intro is finished */}
       <div inert={introActive}>
         <ScrollProgress />
         <a
