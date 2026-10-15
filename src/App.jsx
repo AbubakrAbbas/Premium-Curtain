@@ -46,6 +46,10 @@ export default function App() {
   // "Request Quote": preselect the product and glide to the contact form.
   // Lenis is paused for the duration of the glide so wheel input can't
   // interrupt it (the "stops at How It Works" bug on desktop).
+  // "Request Quote": preselect the product and glide to the contact form.
+  // lock: true makes the glide uninterruptible (wheel ticks can't cut it short).
+  // "Request Quote": preselect the product and glide to the contact form.
+  // lock: true makes the glide uninterruptible (wheel ticks can't cut it short).
   const requestQuote = useCallback((productName = "") => {
     setInterest(productName);
     document.body.style.overflow = "";
@@ -56,19 +60,17 @@ export default function App() {
       if (!el) return;
       const lenis = window.__lenis;
       if (lenis) {
-        lenis.stop(); // ignore wheel/touch during the glide
         lenis.scrollTo(el, {
           offset: -84,
           duration: 1.4,
           force: true,
-          onComplete: () => lenis.start(), // re-enable on arrival
+          lock: true, // ← the correct option: ignores wheel until arrival
         });
       } else {
         el.scrollIntoView({ behavior: "smooth" });
       }
     }, 250);
   }, []);
-
   return (
     <MotionConfig reducedMotion="user">
       {introActive && <CurtainIntro onReveal={onReveal} onDone={onIntroDone} />}
