@@ -26,7 +26,13 @@ const shouldShowIntro = () =>
   !window.location.hash;
 
 export default function App() {
-  const [introActive, setIntroActive] = useState(shouldShowIntro);
+  // play the intro once per browser session; refreshing or navigating back
+  // goes straight to the site (much faster repeat visits)
+  const [introActive, setIntroActive] = useState(() => {
+    if (sessionStorage.getItem("seenIntro")) return false;
+    sessionStorage.setItem("seenIntro", "1");
+    return shouldShowIntro();
+  });
   const [revealed, setRevealed] = useState(!introActive);
   const [modalProduct, setModalProduct] = useState(null);
   const [interest, setInterest] = useState("");
