@@ -23,9 +23,6 @@ function ProductCard({ product, view = 0, onOpen, onView3D }) {
         <div className="h-full w-full transition duration-700 ease-out group-hover:scale-[1.04]">
           <ProductImage product={product} view={view} />
         </div>
-        <span className="absolute left-4 top-4 rounded-full bg-cream/90 px-3 py-1 text-xs font-medium backdrop-blur">
-          {product.type || product.category}
-        </span>
       </button>
 
       <div className="mt-5">

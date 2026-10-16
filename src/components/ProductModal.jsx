@@ -67,11 +67,11 @@ export default function ProductModal({ product, onClose, onQuote, onView3D }) {
 
         {/* details */}
         <div className="flex flex-col p-6 sm:p-9">
-          <p className="eyebrow">
+          {/* <p className="eyebrow">
             {product.type
               ? `${product.category} · ${product.type}`
               : product.category}
-          </p>
+          </p> */}
           <h3 id="product-title" className="mt-2 text-4xl">
             {product.name}
           </h3>

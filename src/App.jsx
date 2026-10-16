@@ -10,7 +10,7 @@ import Installations from "./components/Installations";
 import ProductModal from "./components/ProductModal";
 import ViewerModal from "./components/ViewerModal";
 import HowItWorks from "./components/HowItWorks";
-import Testimonials from "./components/Testimonials";
+import Clients from "./components/Clients";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -90,7 +90,7 @@ export default function App() {
           <Collection onOpen={setModalProduct} onView3D={openPreview} />
           <Installations />
           <HowItWorks />
-          <Testimonials />
+          <Clients />
           <About />
           <Contact interest={interest} />
         </main>

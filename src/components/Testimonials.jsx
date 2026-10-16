@@ -1,24 +1,24 @@
-import { useEffect, useState } from 'react'
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { testimonials } from '../data/siteData'
-import Reveal from './Reveal'
-import { Arrow, ArrowLeft } from './Icons'
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { testimonials } from "../data/siteData";
+import Reveal from "./Reveal";
+import { Arrow, ArrowLeft } from "./Icons";
 
 export default function Testimonials() {
-  const [i, setI] = useState(0)
-  const [paused, setPaused] = useState(false)
-  const reduce = useReducedMotion()
-  const n = testimonials.length
-  const t = testimonials[i]
+  const [i, setI] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const reduce = useReducedMotion();
+  const n = testimonials.length;
+  const t = testimonials[i];
 
   // gentle auto-advance (off for reduced-motion users, or while hovering/focused)
   useEffect(() => {
-    if (reduce || paused || n < 2) return
-    const timer = setInterval(() => setI((v) => (v + 1) % n), 8000)
-    return () => clearInterval(timer)
-  }, [reduce, paused, n])
+    if (reduce || paused || n < 2) return;
+    const timer = setInterval(() => setI((v) => (v + 1) % n), 8000);
+    return () => clearInterval(timer);
+  }, [reduce, paused, n]);
 
-  if (!n) return null
+  if (!n) return null;
 
   return (
     <section id="reviews" className="section bg-sand/50">
@@ -42,11 +42,16 @@ export default function Testimonials() {
                 exit={{ opacity: 0, y: -14 }}
                 transition={{ duration: 0.45 }}
               >
-                <blockquote className="font-serif text-3xl leading-snug sm:text-4xl">“{t.quote}”</blockquote>
+                <blockquote className="font-serif text-3xl leading-snug sm:text-4xl">
+                  “{t.quote}”
+                </blockquote>
                 <figcaption className="mt-7 text-sm text-muted">
-                  <span className="font-medium text-ink">{t.name}</span> · {t.detail}
+                  <span className="font-medium text-ink">{t.name}</span> ·{" "}
+                  {t.detail}
                   {t.sample && (
-                    <span className="ml-2 rounded-full bg-accent/10 px-2 py-0.5 text-[11px] text-accent">Sample</span>
+                    <span className="ml-2 rounded-full bg-accent/10 px-2 py-0.5 text-[11px] text-accent">
+                      Sample
+                    </span>
                   )}
                 </figcaption>
               </motion.figure>
@@ -71,7 +76,7 @@ export default function Testimonials() {
                     aria-label={`Show review ${k + 1}`}
                     aria-current={k === i}
                     onClick={() => setI(k)}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${k === i ? 'w-8 bg-accent' : 'w-1.5 bg-ink/20'}`}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${k === i ? "w-8 bg-accent" : "w-1.5 bg-ink/20"}`}
                   />
                 ))}
               </div>
@@ -88,5 +93,5 @@ export default function Testimonials() {
         </Reveal>
       </div>
     </section>
-  )
+  );
 }
