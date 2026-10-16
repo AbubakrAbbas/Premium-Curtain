@@ -135,6 +135,7 @@ export const collections = [
 
 /**
  * kind  → curtain only: how the fabric behaves in 3D ('blackout' | 'sheer' | 'velvet' | 'linen')
+ *         (products WITHOUT kind get no "View in 3D" button)
  * art   → which illustration is used until real photos are added ('curtain' | 'wallpaper' | 'tvwall' | 'molding' | 'furniture')
  * photos (optional) → array of image URLs. If present, they replace the drawn artwork.
  * model  (optional) → path to a .glb file to use your own 3D model in the 3D preview.
@@ -280,7 +281,7 @@ export const products = [
     name: "Made-to-Measure Pleat",
     category: "Curtains",
     type: "Custom",
-    kind: "linen",
+    // no `kind` here on purpose → no "View in 3D" button for this product
     art: "curtain",
     tagline: "Tailored pleats and finishes for tall, wide or unusual windows.",
     description:
@@ -366,7 +367,6 @@ export const products = [
     art: "wallpaper",
     photos: [
       "/images/products/geo-line.jpg",
-
       "/images/products/geo-line-2.jpg",
     ],
     tagline: "Clean lines and quiet rhythm for contemporary spaces.",
@@ -421,7 +421,6 @@ export const products = [
     photos: [
       "/images/products/fluted-tv-wall.jpg",
       "/images/products/fluted-tv-wall-2.jpg",
-
       "/images/products/fluted-tv-wall-3.jpg",
     ],
     tagline: "Vertical wood slats with hidden LED around your screen.",
@@ -529,7 +528,6 @@ export const products = [
     photos: [
       "/images/products/wall-panel-molding.jpg",
       "/images/products/wall-panel-molding-2.jpg",
-
       "/images/products/wall-panel-molding-3.jpg",
     ],
     tagline: "Picture-frame panels for dining rooms and hallways.",
@@ -586,7 +584,6 @@ export const products = [
     photos: [
       "/images/products/velvet-sofa.jpg",
       "/images/products/velvet-sofa-2.jpg",
-
       "/images/products/velvet-sofa-3.jpg",
     ],
     tagline: "A deep, plush sofa upholstered in your choice of fabric.",
@@ -725,8 +722,9 @@ export const about = {
 
 /**
  * Before & after gallery on the home page.
- * Replace `before` with the real "before" photo when available, and set
- * filterBefore: false so it isn't desaturated.
+ * - `before` / `after`: the two photos (object-position can be tuned with beforePos/afterPos).
+ * - filterBefore: true applies a "raw" desaturation to the before photo (used only
+ *   for placeholder demos). With real photos, keep it false.
  */
 export const installations = [
   {
