@@ -165,7 +165,7 @@ export const products = [
     category: "Curtains",
     type: "Blackout",
     art: "curtain",
-    photos: ["/images/products/noir-blackout.webp"],
+    photos: ["/images/products/blackout.webp"],
     tagline: "Blue-grey eyelet panels that block the light and the heat.",
     description:
       "Plain-dyed blackout curtains in a soft blue-grey, finished with easy-glide eyelets. The triple-weave fabric blocks almost all daylight, helps keep the room cooler in summer, and hangs in clean, even folds.",
@@ -288,7 +288,7 @@ export const products = [
     category: "Curtains",
     type: "Custom",
     art: "curtain",
-    photos: ["/images/products/made-to-measure-pleat.webp"],
+    photos: ["/images/products/image.webp"],
     tagline: "Taupe drapes with hold-backs over a full-width sheer.",
     description:
       "A real living-room install: floor-to-ceiling taupe drapes, tailored with banded hold-backs, layered over a full-width white sheer on a double track. We measure, make and hang this exact setup for your window — in your choice of fabric and color.",
@@ -457,6 +457,93 @@ export const products = [
       "/images/products/tvunitextra1.webp",
       "/images/products/tvunitextra2.webp",
       "/images/products/tvunitextra3.webp",
+      "/images/products/matte-panel-wall-2.webp",
+    ],
+    tagline: "Full-height decorative panels with integrated wall lights.",
+    description:
+      "Full-height decorative wall panels with a subtle vertical texture, designer wall lights and a long floating console. A clean, finished backdrop for both the TV and the room — built for apartments and modern interiors.",
+    fabric: "Embossed decorative panels + lacquered console",
+    sizes: ["Made to measure", 'Fits screens 43" – 85"'],
+    colors: [
+      { name: "Warm White", hex: "#efe9dd" },
+      { name: "Greige", hex: "#b3a897" },
+      { name: "Graphite", hex: "#4a4742" },
+    ],
+    features: [
+      "Full-height decorative panels",
+      "Designer wall lights included",
+      "Long floating console with storage",
+      "Fingerprint-resistant finish",
+    ],
+    care: "Wipe with a soft damp cloth; no polish needed.",
+  },
+
+  {
+    id: "matte-panel-wall",
+    name: "Designer Panel TV Wall",
+    category: "TV Wall Design",
+    art: "tvwall",
+    photos: [
+      "/images/products/tvunitextra1.webp",
+      "/images/products/tvunitextra2.webp",
+      "/images/products/tvunitextra3.webp",
+      "/images/products/matte-panel-wall-2.webp",
+    ],
+    tagline: "Full-height decorative panels with integrated wall lights.",
+    description:
+      "Full-height decorative wall panels with a subtle vertical texture, designer wall lights and a long floating console. A clean, finished backdrop for both the TV and the room — built for apartments and modern interiors.",
+    fabric: "Embossed decorative panels + lacquered console",
+    sizes: ["Made to measure", 'Fits screens 43" – 85"'],
+    colors: [
+      { name: "Warm White", hex: "#efe9dd" },
+      { name: "Greige", hex: "#b3a897" },
+      { name: "Graphite", hex: "#4a4742" },
+    ],
+    features: [
+      "Full-height decorative panels",
+      "Designer wall lights included",
+      "Long floating console with storage",
+      "Fingerprint-resistant finish",
+    ],
+    care: "Wipe with a soft damp cloth; no polish needed.",
+  },
+
+  {
+    id: "matte-panel-wall",
+    name: "Designer Panel TV Wall",
+    category: "TV Wall Design",
+    art: "tvwall",
+    photos: [
+      "/images/products/tvunitextra2.webp",
+      "/images/products/tvunitextra3.webp",
+      "/images/products/matte-panel-wall-2.webp",
+    ],
+    tagline: "Full-height decorative panels with integrated wall lights.",
+    description:
+      "Full-height decorative wall panels with a subtle vertical texture, designer wall lights and a long floating console. A clean, finished backdrop for both the TV and the room — built for apartments and modern interiors.",
+    fabric: "Embossed decorative panels + lacquered console",
+    sizes: ["Made to measure", 'Fits screens 43" – 85"'],
+    colors: [
+      { name: "Warm White", hex: "#efe9dd" },
+      { name: "Greige", hex: "#b3a897" },
+      { name: "Graphite", hex: "#4a4742" },
+    ],
+    features: [
+      "Full-height decorative panels",
+      "Designer wall lights included",
+      "Long floating console with storage",
+      "Fingerprint-resistant finish",
+    ],
+    care: "Wipe with a soft damp cloth; no polish needed.",
+  },
+
+  {
+    id: "matte-panel-wall",
+    name: "Designer Panel TV Wall",
+    category: "TV Wall Design",
+    art: "tvwall",
+    photos: [
+      "/images/products/tvunitextra3.png",
       "/images/products/matte-panel-wall-2.webp",
     ],
     tagline: "Full-height decorative panels with integrated wall lights.",
@@ -647,6 +734,96 @@ export const products = [
       "Delivered and placed by our team",
     ],
     care: "Spot-clean promptly; vacuum crevices monthly.",
+  },
+
+  {
+    id: "velvet-sofa",
+    name: "Velvet Sofa Set",
+    category: "Furniture",
+    art: "furniture",
+    photos: [
+      "/images/products/dress1-1.webp",
+      "/images/products/velvet-sofa-2.webp",
+      "/images/products/velvet-sofa-3.webp",
+    ],
+    tagline: "Rust-orange velvet seating with a matching bench table.",
+    description:
+      "Deep, plush seating in a rich rust velvet — sofas styled with bolsters and scatter cushions, plus a matching upholstered bench-coffee table. Built on hardwood frames, upholstered in your choice of fabric and color.",
+    fabric: "Hardwood frame, high-resilience foam",
+    sizes: ["Standard 220 cm", "Made to any width"],
+    colors: [
+      { name: "Rust", hex: "#b4552d" },
+      { name: "Emerald", hex: "#2f5d50" },
+      { name: "Burgundy", hex: "#6e2433" },
+      { name: "Sand", hex: "#c3ae8d" },
+    ],
+    features: [
+      "Fabric and color of your choice",
+      "Solid hardwood frame",
+      "Bench-coffee table to match",
+      "Delivered and placed by our team",
+    ],
+    care: "Vacuum weekly; spot-clean with a damp cloth and mild soap.",
+  },
+
+  {
+    id: "velvet-sofa",
+    name: "Velvet Sofa Set",
+    category: "Furniture",
+    art: "furniture",
+    photos: [
+      "/images/products/dress1-2.webp",
+      "/images/products/velvet-sofa-2.webp",
+      "/images/products/velvet-sofa-3.webp",
+    ],
+    tagline: "Rust-orange velvet seating with a matching bench table.",
+    description:
+      "Deep, plush seating in a rich rust velvet — sofas styled with bolsters and scatter cushions, plus a matching upholstered bench-coffee table. Built on hardwood frames, upholstered in your choice of fabric and color.",
+    fabric: "Hardwood frame, high-resilience foam",
+    sizes: ["Standard 220 cm", "Made to any width"],
+    colors: [
+      { name: "Rust", hex: "#b4552d" },
+      { name: "Emerald", hex: "#2f5d50" },
+      { name: "Burgundy", hex: "#6e2433" },
+      { name: "Sand", hex: "#c3ae8d" },
+    ],
+    features: [
+      "Fabric and color of your choice",
+      "Solid hardwood frame",
+      "Bench-coffee table to match",
+      "Delivered and placed by our team",
+    ],
+    care: "Vacuum weekly; spot-clean with a damp cloth and mild soap.",
+  },
+
+  {
+    id: "velvet-sofa",
+    name: "Velvet Sofa Set",
+    category: "Furniture",
+    art: "furniture",
+    photos: [
+      "/images/products/dress1-3.webp",
+      "/images/products/velvet-sofa-2.webp",
+      "/images/products/velvet-sofa-3.webp",
+    ],
+    tagline: "Rust-orange velvet seating with a matching bench table.",
+    description:
+      "Deep, plush seating in a rich rust velvet — sofas styled with bolsters and scatter cushions, plus a matching upholstered bench-coffee table. Built on hardwood frames, upholstered in your choice of fabric and color.",
+    fabric: "Hardwood frame, high-resilience foam",
+    sizes: ["Standard 220 cm", "Made to any width"],
+    colors: [
+      { name: "Rust", hex: "#b4552d" },
+      { name: "Emerald", hex: "#2f5d50" },
+      { name: "Burgundy", hex: "#6e2433" },
+      { name: "Sand", hex: "#c3ae8d" },
+    ],
+    features: [
+      "Fabric and color of your choice",
+      "Solid hardwood frame",
+      "Bench-coffee table to match",
+      "Delivered and placed by our team",
+    ],
+    care: "Vacuum weekly; spot-clean with a damp cloth and mild soap.",
   },
 ];
 
