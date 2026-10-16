@@ -4,7 +4,7 @@ import sharp from "sharp";
 import fs from "node:fs";
 import path from "node:path";
 
-const dir = "public/images/products";
+const dir = "source-images/products"; // originals; then run: node optimize-images.mjs
 let done = 0;
 
 for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".jpg"))) {

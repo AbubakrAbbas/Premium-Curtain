@@ -133,7 +133,7 @@ export const products = [
     category: "Curtains",
     type: "Linen",
     art: "curtain",
-    photos: ["/images/products/natural-linen.jpg"],
+    photos: ["/images/products/natural-linen.webp"],
     tagline: "Leaf-print panels in sage and cream, tied back with tassels.",
     description:
       "A fresh botanical print on a linen-look base — sage green and cream panels that brighten a room without overwhelming it. Finished with eyelet headings and matching tie-backs with tassels.",
@@ -165,7 +165,7 @@ export const products = [
     category: "Curtains",
     type: "Blackout",
     art: "curtain",
-    photos: ["/images/products/noir-blackout.jpg"],
+    photos: ["/images/products/noir-blackout.webp"],
     tagline: "Blue-grey eyelet panels that block the light and the heat.",
     description:
       "Plain-dyed blackout curtains in a soft blue-grey, finished with easy-glide eyelets. The triple-weave fabric blocks almost all daylight, helps keep the room cooler in summer, and hangs in clean, even folds.",
@@ -198,8 +198,8 @@ export const products = [
     type: "Sheer",
     art: "curtain",
     photos: [
-      "/images/products/cloud-sheer.jpg",
-      "/images/products/cloud-sheer-2.jpg",
+      "/images/products/cloud-sheer.webp",
+      "/images/products/cloud-sheer-2.webp",
     ],
     tagline: "A soft wave of sheer across the whole window.",
     description:
@@ -231,7 +231,7 @@ export const products = [
     category: "Curtains",
     type: "Velvet",
     art: "curtain",
-    photos: ["/images/products/royal-velvet.jpg"],
+    photos: ["/images/products/royal-velvet.webp"],
     tagline: "Chocolate and taupe panels with a dressed, hold-back look.",
     description:
       "Heavy, soft-touch panels in two complementary tones — deep chocolate and warm taupe — hung on eyelets and styled with hold-backs for a tailored window. The dense fabric blocks drafts and most light on its own.",
@@ -263,7 +263,7 @@ export const products = [
     category: "Curtains",
     type: "Custom",
     art: "curtain",
-    photos: ["/images/products/day-night-duo.jpg"],
+    photos: ["/images/products/day-night-duo.webp"],
     tagline: "Soft beige pinch pleats layered over a white sheer.",
     description:
       "A classic pairing: full-length beige pinch-pleat drapes in front of a white sheer on a double track. The sheer filters daytime light; close the drapes for privacy and darkness at night.",
@@ -288,7 +288,7 @@ export const products = [
     category: "Curtains",
     type: "Custom",
     art: "curtain",
-    photos: ["/images/products/made-to-measure-pleat.jpg"],
+    photos: ["/images/products/made-to-measure-pleat.webp"],
     tagline: "Taupe drapes with hold-backs over a full-width sheer.",
     description:
       "A real living-room install: floor-to-ceiling taupe drapes, tailored with banded hold-backs, layered over a full-width white sheer on a double track. We measure, make and hang this exact setup for your window — in your choice of fabric and color.",
@@ -316,8 +316,8 @@ export const products = [
     category: "Wallpaper",
     art: "wallpaper",
     photos: [
-      "/images/products/silk-damask.jpg",
-      "/images/products/silk-damask-2.jpg",
+      "/images/products/silk-damask.webp",
+      "/images/products/silk-damask-2.webp",
     ],
     tagline: "Swirling bronze texture for a quiet, luxurious wall.",
     description:
@@ -344,8 +344,8 @@ export const products = [
     category: "Wallpaper",
     art: "wallpaper",
     photos: [
-      "/images/products/geo-line.jpg",
-      "/images/products/geo-line-2.jpg",
+      "/images/products/geo-line.webp",
+      "/images/products/geo-line-2.webp",
     ],
     tagline: "Fine grey lines over a soft textured base.",
     description:
@@ -370,7 +370,7 @@ export const products = [
     name: "Gold-Line Wallpaper Rolls",
     category: "Wallpaper",
     art: "wallpaper",
-    photos: ["/images/products/grasscloth.jpg"],
+    photos: ["/images/products/grasscloth.webp"],
     tagline: "Soft-tone paper with fine gold lines, supplied in rolls.",
     description:
       "A refined wallpaper in pale grey, blush and ivory with fine gold line work, supplied ready to hang. We measure your walls, match the pattern and install it seam to seam.",
@@ -397,9 +397,9 @@ export const products = [
     category: "TV Wall Design",
     art: "tvwall",
     photos: [
-      "/images/products/fluted-tv-wall.jpg",
-      "/images/products/fluted-tv-wall-2.jpg",
-      "/images/products/fluted-tv-wall-3.jpg",
+      "/images/products/fluted-tv-wall.webp",
+      "/images/products/fluted-tv-wall-2.webp",
+      "/images/products/fluted-tv-wall-3.webp",
     ],
     tagline: "Full-height wood slats with floating display shelves.",
     description:
@@ -425,8 +425,8 @@ export const products = [
     category: "TV Wall Design",
     art: "tvwall",
     photos: [
-      "/images/products/marble-media-wall.jpg",
-      "/images/products/marble-media-wall-2.jpg",
+      "/images/products/marble-media-wall.webp",
+      "/images/products/marble-media-wall-2.webp",
     ],
     tagline:
       "Stone-look panels framed in fluted wood, with a floating console.",
@@ -453,11 +453,11 @@ export const products = [
     category: "TV Wall Design",
     art: "tvwall",
     photos: [
-      "/images/products/matte-panel-wall.jpg",
-      "/images/products/tvunitextra1.jpg",
-      "/images/products/tvunitextra2.jpg",
-      "/images/products/tvunitextra3.jpg",
-      "/images/products/matte-panel-wall-2.jpg",
+      "/images/products/matte-panel-wall.webp",
+      "/images/products/tvunitextra1.webp",
+      "/images/products/tvunitextra2.webp",
+      "/images/products/tvunitextra3.webp",
+      "/images/products/matte-panel-wall-2.webp",
     ],
     tagline: "Full-height decorative panels with integrated wall lights.",
     description:
@@ -484,7 +484,7 @@ export const products = [
     name: "Cove Ceiling & Crown Molding",
     category: "Molding",
     art: "molding",
-    photos: ["/images/products/crown-molding.jpg"],
+    photos: ["/images/products/crown-molding.webp"],
     tagline: "A dropped ceiling with hidden LED glow and classic crown trim.",
     description:
       "A tray ceiling with a hidden LED cove and layered crown molding — the warm glow makes the room feel taller and the detailing finishes it. Painted to match your ceiling, designed around your lighting plan.",
@@ -508,10 +508,10 @@ export const products = [
     category: "Molding",
     art: "molding",
     photos: [
-      "/images/products/wall-panel-molding.jpg",
-      "/images/products/wall-panel-molding-2.jpg",
-      "/images/products/wall-panel-molding-3.jpg",
-      "/images/products/wall-panel-molding-4.jpg",
+      "/images/products/wall-panel-molding.webp",
+      "/images/products/wall-panel-molding-2.webp",
+      "/images/products/wall-panel-molding-3.webp",
+      "/images/products/wall-panel-molding-4.webp",
     ],
     tagline: "Picture-frame panels, painted to match your wall.",
     description:
@@ -537,8 +537,8 @@ export const products = [
     category: "Molding",
     art: "molding",
     photos: [
-      "/images/products/ceiling-trim.jpg",
-      "/images/products/ceiling-trim-2.jpg",
+      "/images/products/ceiling-trim.webp",
+      "/images/products/ceiling-trim-2.webp",
     ],
     tagline: "Paneled walls with fluted sections and warm LED inlays.",
     description:
@@ -565,9 +565,9 @@ export const products = [
     category: "Furniture",
     art: "furniture",
     photos: [
-      "/images/products/velvet-sofa.jpg",
-      "/images/products/velvet-sofa-2.jpg",
-      "/images/products/velvet-sofa-3.jpg",
+      "/images/products/velvet-sofa.webp",
+      "/images/products/velvet-sofa-2.webp",
+      "/images/products/velvet-sofa-3.webp",
     ],
     tagline: "Rust-orange velvet seating with a matching bench table.",
     description:
@@ -594,10 +594,10 @@ export const products = [
     category: "Furniture",
     art: "furniture",
     photos: [
-      "/images/products/upholstered-headboard.jpg",
-      "/images/products/upholstered-headboard-2.jpg",
-      "/images/products/upholstered-headboard-3.jpg",
-      "/images/products/upholstered-headboard-4.jpg",
+      "/images/products/upholstered-headboard.webp",
+      "/images/products/upholstered-headboard-2.webp",
+      "/images/products/upholstered-headboard-3.webp",
+      "/images/products/upholstered-headboard-4.webp",
     ],
     tagline: "A channel-tufted, scalloped headboard in soft blush.",
     description:
@@ -624,10 +624,10 @@ export const products = [
     category: "Furniture",
     art: "furniture",
     photos: [
-      "/images/products/accent-chairs.jpg",
-      "/images/products/dress1-1.jpg",
-      "/images/products/dress1-2.jpg",
-      "/images/products/dress1-3.jpg",
+      "/images/products/accent-chairs.webp",
+      "/images/products/dress1-1.webp",
+      "/images/products/dress1-2.webp",
+      "/images/products/dress1-3.webp",
     ],
     tagline: "Cream fabric seating with dark wood legs.",
     description:
@@ -698,7 +698,7 @@ export const testimonials = [
 ];
 
 export const about = {
-  image: "/images/products/silk-damask.jpg",
+  image: "/images/products/silk-damask.webp",
   eyebrow: "Our story",
   title: "Good interiors are quietly the best part of a home.",
   paragraphs: [
@@ -713,24 +713,24 @@ export const installations = [
     id: "install-curtains",
     title: "Bedroom curtains",
     note: "Made-to-measure curtains, hung floor to ceiling",
-    before: "/images/before/before-curtains.jpg",
-    after: "/images/before/after-curtains.jpg",
+    before: "/images/before/before-curtains.webp",
+    after: "/images/before/after-curtains.webp",
     filterBefore: false,
   },
   {
     id: "install-molding",
     title: "Living room wall panels",
     note: "Classic molding grid, painted to match the wall",
-    before: "/images/before/before-molding.jpg",
-    after: "/images/before/after-molding.jpg",
+    before: "/images/before/before-molding.webp",
+    after: "/images/before/after-molding.webp",
     filterBefore: false,
   },
   {
     id: "install-walls",
     title: "Bedroom walls refreshed",
     note: "Wall prep, finish and detailing",
-    before: "/images/before/before-walls.jpg",
-    after: "/images/before/after-walls.jpg",
+    before: "/images/before/before-walls.webp",
+    after: "/images/before/after-walls.webp",
     filterBefore: false,
   },
 ];

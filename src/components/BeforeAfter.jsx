@@ -71,6 +71,8 @@ export default function BeforeAfter({
         src={after}
         alt={alt}
         draggable={false}
+        loading="lazy"
+        decoding="async"
         className={`ba-img ${afterPosition}`}
       />
 
@@ -84,6 +86,8 @@ export default function BeforeAfter({
           src={before}
           alt=""
           draggable={false}
+          loading="lazy"
+          decoding="async"
           className={`ba-img ${beforePosition} ${
             filterBefore ? "saturate-[0.35] brightness-[1.12]" : ""
           }`}

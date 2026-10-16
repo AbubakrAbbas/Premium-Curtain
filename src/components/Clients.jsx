@@ -1,7 +1,46 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { clientVideos } from "../data/siteData";
 import Reveal from "./Reveal";
+
+/**
+ * A muted looping video that only starts downloading when it is close to the
+ * screen. Without this, all the videos (~7 MB) download at page load and slow
+ * down the photos.
+ */
+function LazyVideo({ src, className }) {
+  const ref = useRef(null);
+  const [near, setNear] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || near) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setNear(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "300px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [near]);
+
+  return (
+    <video
+      ref={ref}
+      className={className}
+      src={near ? src : undefined}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="none"
+    />
+  );
+}
 
 /**
  * "Our Satisfied Clients" — one row of installation videos that slides
@@ -104,14 +143,9 @@ export default function Clients() {
               className="w-[74%] shrink-0 snap-start sm:w-[46%] lg:w-[31.5%]"
             >
               <div className="relative overflow-hidden rounded-3xl bg-sand">
-                <video
+                <LazyVideo
                   className="aspect-[3/4] h-full w-full object-cover"
                   src={v.src}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
                 />
               </div>
               {v.caption && (
