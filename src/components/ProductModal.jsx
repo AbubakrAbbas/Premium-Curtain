@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import ProductImage from "./ProductImage";
-import { Check, Close, Cube } from "./Icons";
+import { Check, Close } from "./Icons";
 
 /** Product details popup: photo + details scroll together as one card. */
-export default function ProductModal({ product, onClose, onQuote, onView3D }) {
+export default function ProductModal({ product, onClose, onQuote }) {
   const closeRef = useRef(null);
   const color = product.colors[0];
 
@@ -67,11 +67,6 @@ export default function ProductModal({ product, onClose, onQuote, onView3D }) {
 
         {/* details */}
         <div className="flex flex-col p-6 sm:p-9">
-          {/* <p className="eyebrow">
-            {product.type
-              ? `${product.category} · ${product.type}`
-              : product.category}
-          </p> */}
           <h3 id="product-title" className="mt-2 text-4xl">
             {product.name}
           </h3>
@@ -132,15 +127,6 @@ export default function ProductModal({ product, onClose, onQuote, onView3D }) {
             >
               Request Quote
             </button>
-            {product.kind && (
-              <button
-                type="button"
-                onClick={() => onView3D(product.id, 0)}
-                className="btn btn-ghost"
-              >
-                <Cube width={18} height={18} /> View in 3D
-              </button>
-            )}
           </div>
         </div>
       </motion.div>

@@ -33,21 +33,18 @@ export const nav = [
 ];
 
 /**
- * The opening-curtain intro. Visitors scroll, swipe, press a key or tap the button:
- * the curtains part, the overlay fades, and the site is revealed.
- * Set `enabled: false` to turn it off.
- * (It is skipped automatically for visitors who prefer reduced motion.)
+ * The opening-curtain intro. Set `enabled: false` to turn it off.
+ * (Skipped automatically for visitors who prefer reduced motion.)
  */
 export const intro = {
   enabled: true,
-  fabric: "#3e2c1e", // velvet color of the opening curtains (deep espresso)
+  fabric: "#3e2c1e",
 };
 
-/** Hero text + the colors visitors can try on the hero curtains (swap for a real photo, see README). */
 export const hero = {
   eyebrow: "Curtains · Wallpaper · TV Walls · Molding · Furniture — Dubai",
   title: "A home that feels finished, down to the last detail.",
-  accentWord: "finished", // this word is set in italic accent color
+  accentWord: "finished",
   text: "Made-to-measure curtains, wallpaper, TV wall designs, molding and custom furniture — measured, crafted and installed by one Dubai team.",
   trust: [
     "Free home visit consultation",
@@ -87,17 +84,12 @@ export const whyUs = [
   },
 ];
 
-/**
- * The five collections shown as separate sections on the page, in this order.
- * `category` must match the products below. `tour` lines are used in the
- * opening showroom tour.
- */
 export const collections = [
   {
     id: "curtains",
     eyebrow: "Curtains & blinds",
     title: "Curtains, made to measure.",
-    lead: "Blackout, sheer, printed and plain — measured, stitched and hung by our team. Tap a curtain for details, or preview it in 3D.",
+    lead: "Blackout, sheer, printed and plain — measured, stitched and hung by our team. Tap a curtain for details.",
     tour: "Curtains that finish a room",
   },
   {
@@ -131,11 +123,8 @@ export const collections = [
 ];
 
 /**
- * kind  → curtain only: how the fabric behaves in 3D ('blackout' | 'sheer' | 'velvet' | 'linen')
- *         (products WITHOUT kind get no "View in 3D" button)
- * art   → which illustration is used until real photos are added ('curtain' | 'wallpaper' | 'tvwall' | 'molding' | 'furniture')
- * photos (optional) → array of image URLs. If present, they replace the drawn artwork.
- * model  (optional) → path to a .glb file to use your own 3D model in the 3D preview.
+ * art → fallback illustration type ('curtain' | 'wallpaper' | 'tvwall' | 'molding' | 'furniture')
+ * photos (optional) → image URLs; shown instead of the artwork.
  */
 export const products = [
   {
@@ -143,10 +132,8 @@ export const products = [
     name: "Botanical Print Curtains",
     category: "Curtains",
     type: "Linen",
-    kind: "linen",
     art: "curtain",
     photos: ["/images/products/natural-linen.jpg"],
-    textureUrl: "/images/products/natural-linen-tex.jpg",
     tagline: "Leaf-print panels in sage and cream, tied back with tassels.",
     description:
       "A fresh botanical print on a linen-look base — sage green and cream panels that brighten a room without overwhelming it. Finished with eyelet headings and matching tie-backs with tassels.",
@@ -165,23 +152,20 @@ export const products = [
       { name: "Olive", hex: "#7d8062" },
     ],
     features: [
-      "Luxury Two-Tone Curtains",
+      "Luxury two-tone options",
       "Matching tie-backs with tassels",
       "Soft, warm daylight",
       "Easy to live with and machine washable",
     ],
     care: "Machine wash cold, tumble dry low. Iron while slightly damp for a crisp look, or leave relaxed.",
   },
-
   {
     id: "noir-blackout",
     name: "Slate Blackout Curtains",
     category: "Curtains",
     type: "Blackout",
-    kind: "blackout",
     art: "curtain",
     photos: ["/images/products/noir-blackout.jpg"],
-    textureUrl: "/images/products/noir-blackout-tex.jpg",
     tagline: "Blue-grey eyelet panels that block the light and the heat.",
     description:
       "Plain-dyed blackout curtains in a soft blue-grey, finished with easy-glide eyelets. The triple-weave fabric blocks almost all daylight, helps keep the room cooler in summer, and hangs in clean, even folds.",
@@ -212,13 +196,11 @@ export const products = [
     name: "Wave Sheer Curtains",
     category: "Curtains",
     type: "Sheer",
-    kind: "sheer",
     art: "curtain",
     photos: [
       "/images/products/cloud-sheer.jpg",
       "/images/products/cloud-sheer-2.jpg",
     ],
-    textureUrl: "/images/products/cloud-sheer-tex.jpg",
     tagline: "A soft wave of sheer across the whole window.",
     description:
       "A fine voile hung in a continuous wave — it diffuses harsh sun into a gentle glow and gives daytime privacy without closing the room in. Pair it with side drapes for evenings.",
@@ -248,10 +230,8 @@ export const products = [
     name: "Two-Tone Eyelet Drapes",
     category: "Curtains",
     type: "Velvet",
-    kind: "velvet",
     art: "curtain",
     photos: ["/images/products/royal-velvet.jpg"],
-    textureUrl: "/images/products/royal-velvet-tex.jpg",
     tagline: "Chocolate and taupe panels with a dressed, hold-back look.",
     description:
       "Heavy, soft-touch panels in two complementary tones — deep chocolate and warm taupe — hung on eyelets and styled with hold-backs for a tailored window. The dense fabric blocks drafts and most light on its own.",
@@ -277,16 +257,13 @@ export const products = [
     ],
     care: "Dry clean recommended. Steam gently from the back; never press directly on the pile.",
   },
-
   {
     id: "day-night-duo",
     name: "Pinch Pleat & Sheer Duo",
     category: "Curtains",
     type: "Custom",
-    kind: "blackout",
     art: "curtain",
     photos: ["/images/products/day-night-duo.jpg"],
-    textureUrl: "/images/products/day-night-duo-tex.jpg",
     tagline: "Soft beige pinch pleats layered over a white sheer.",
     description:
       "A classic pairing: full-length beige pinch-pleat drapes in front of a white sheer on a double track. The sheer filters daytime light; close the drapes for privacy and darkness at night.",
@@ -305,13 +282,11 @@ export const products = [
     ],
     care: "Wash each layer separately: cold and gentle for the sheer, dry clean or cold wash for the drapes.",
   },
-
   {
     id: "made-to-measure-pleat",
     name: "Made-to-Measure Drapes & Sheer",
     category: "Curtains",
     type: "Custom",
-    // no `kind` here on purpose → no "View in 3D" button for this product
     art: "curtain",
     photos: ["/images/products/made-to-measure-pleat.jpg"],
     tagline: "Taupe drapes with hold-backs over a full-width sheer.",
@@ -479,95 +454,14 @@ export const products = [
     art: "tvwall",
     photos: [
       "/images/products/matte-panel-wall.jpg",
-      "/images/products/matte-panel-wall-2.jpg",
-    ],
-    tagline: "Full-height decorative panels with integrated wall lights.",
-    description:
-      "Full-height decorative wall panels with a subtle vertical texture, two designer wall lights and a long floating console. A clean, finished backdrop for both the TV and the room — built for apartments and modern interiors.",
-    fabric: "Embossed decorative panels + lacquered console",
-    sizes: ["Made to measure", 'Fits screens 43" – 85"'],
-    colors: [
-      { name: "Warm White", hex: "#efe9dd" },
-      { name: "Greige", hex: "#b3a897" },
-      { name: "Graphite", hex: "#4a4742" },
-    ],
-    features: [
-      "Full-height decorative panels",
-      "Designer wall lights included",
-      "Long floating console with storage",
-      "Fingerprint-resistant finish",
-    ],
-    care: "Wipe with a soft damp cloth; no polish needed.",
-  },
-
-  {
-    id: "matte-panel-wall",
-    name: "Designer Panel TV Wall",
-    category: "TV Wall Design",
-    art: "tvwall",
-    photos: [
       "/images/products/tvunitextra1.jpg",
-      "/images/products/matte-panel-wall-2.jpg",
-    ],
-    tagline: "Full-height decorative panels with integrated wall lights.",
-    description:
-      "Full-height decorative wall panels with a subtle vertical texture, two designer wall lights and a long floating console. A clean, finished backdrop for both the TV and the room — built for apartments and modern interiors.",
-    fabric: "Embossed decorative panels + lacquered console",
-    sizes: ["Made to measure", 'Fits screens 43" – 85"'],
-    colors: [
-      { name: "Warm White", hex: "#efe9dd" },
-      { name: "Greige", hex: "#b3a897" },
-      { name: "Graphite", hex: "#4a4742" },
-    ],
-    features: [
-      "Full-height decorative panels",
-      "Designer wall lights included",
-      "Long floating console with storage",
-      "Fingerprint-resistant finish",
-    ],
-    care: "Wipe with a soft damp cloth; no polish needed.",
-  },
-
-  {
-    id: "matte-panel-wall",
-    name: "Designer Panel TV Wall",
-    category: "TV Wall Design",
-    art: "tvwall",
-    photos: [
       "/images/products/tvunitextra2.jpg",
-      "/images/products/matte-panel-wall-2.jpg",
-    ],
-    tagline: "Full-height decorative panels with integrated wall lights.",
-    description:
-      "Full-height decorative wall panels with a subtle vertical texture, two designer wall lights and a long floating console. A clean, finished backdrop for both the TV and the room — built for apartments and modern interiors.",
-    fabric: "Embossed decorative panels + lacquered console",
-    sizes: ["Made to measure", 'Fits screens 43" – 85"'],
-    colors: [
-      { name: "Warm White", hex: "#efe9dd" },
-      { name: "Greige", hex: "#b3a897" },
-      { name: "Graphite", hex: "#4a4742" },
-    ],
-    features: [
-      "Full-height decorative panels",
-      "Designer wall lights included",
-      "Long floating console with storage",
-      "Fingerprint-resistant finish",
-    ],
-    care: "Wipe with a soft damp cloth; no polish needed.",
-  },
-
-  {
-    id: "matte-panel-wall",
-    name: "Designer Panel TV Wall",
-    category: "TV Wall Design",
-    art: "tvwall",
-    photos: [
       "/images/products/tvunitextra3.jpg",
       "/images/products/matte-panel-wall-2.jpg",
     ],
     tagline: "Full-height decorative panels with integrated wall lights.",
     description:
-      "Full-height decorative wall panels with a subtle vertical texture, two designer wall lights and a long floating console. A clean, finished backdrop for both the TV and the room — built for apartments and modern interiors.",
+      "Full-height decorative wall panels with a subtle vertical texture, designer wall lights and a long floating console. A clean, finished backdrop for both the TV and the room — built for apartments and modern interiors.",
     fabric: "Embossed decorative panels + lacquered console",
     sizes: ["Made to measure", 'Fits screens 43" – 85"'],
     colors: [
@@ -729,85 +623,12 @@ export const products = [
     name: "Fabric Armchairs & Sofa",
     category: "Furniture",
     art: "furniture",
-    photos: ["/images/products/accent-chairs.jpg"],
-    tagline: "Cream fabric seating with dark wood legs.",
-    description:
-      "Soft cream armchairs and a matching sofa on tapered wood legs — comfortable everyday seating that coordinates with the same fabrics as our curtains, so the room feels designed as one piece.",
-    fabric: "Hardwood frame, your choice of fabric",
-    sizes: ["Made to order"],
-    colors: [
-      { name: "Cream", hex: "#e8e0d2" },
-      { name: "Oat", hex: "#d8cbb4" },
-      { name: "Sage", hex: "#7f8f78" },
-      { name: "Mustard", hex: "#b88a2d" },
+    photos: [
+      "/images/products/accent-chairs.jpg",
+      "/images/products/dress1-1.jpg",
+      "/images/products/dress1-2.jpg",
+      "/images/products/dress1-3.jpg",
     ],
-    features: [
-      "Coordinates with your curtains",
-      "Any fabric from the collection",
-      "Comfortable, everyday seating",
-      "Delivered and placed by our team",
-    ],
-    care: "Spot-clean promptly; vacuum crevices monthly.",
-  },
-
-  {
-    id: "accent-chairs",
-    name: "Fabric Armchairs & Sofa",
-    category: "Furniture",
-    art: "furniture",
-    photos: ["/images/products/dress1 (1).jpg"],
-    tagline: "Cream fabric seating with dark wood legs.",
-    description:
-      "Soft cream armchairs and a matching sofa on tapered wood legs — comfortable everyday seating that coordinates with the same fabrics as our curtains, so the room feels designed as one piece.",
-    fabric: "Hardwood frame, your choice of fabric",
-    sizes: ["Made to order"],
-    colors: [
-      { name: "Cream", hex: "#e8e0d2" },
-      { name: "Oat", hex: "#d8cbb4" },
-      { name: "Sage", hex: "#7f8f78" },
-      { name: "Mustard", hex: "#b88a2d" },
-    ],
-    features: [
-      "Coordinates with your curtains",
-      "Any fabric from the collection",
-      "Comfortable, everyday seating",
-      "Delivered and placed by our team",
-    ],
-    care: "Spot-clean promptly; vacuum crevices monthly.",
-  },
-
-  {
-    id: "accent-chairs",
-    name: "Fabric Armchairs & Sofa",
-    category: "Furniture",
-    art: "furniture",
-    photos: ["/images/products/dress1 (2).jpg"],
-    tagline: "Cream fabric seating with dark wood legs.",
-    description:
-      "Soft cream armchairs and a matching sofa on tapered wood legs — comfortable everyday seating that coordinates with the same fabrics as our curtains, so the room feels designed as one piece.",
-    fabric: "Hardwood frame, your choice of fabric",
-    sizes: ["Made to order"],
-    colors: [
-      { name: "Cream", hex: "#e8e0d2" },
-      { name: "Oat", hex: "#d8cbb4" },
-      { name: "Sage", hex: "#7f8f78" },
-      { name: "Mustard", hex: "#b88a2d" },
-    ],
-    features: [
-      "Coordinates with your curtains",
-      "Any fabric from the collection",
-      "Comfortable, everyday seating",
-      "Delivered and placed by our team",
-    ],
-    care: "Spot-clean promptly; vacuum crevices monthly.",
-  },
-
-  {
-    id: "accent-chairs",
-    name: "Fabric Armchairs & Sofa",
-    category: "Furniture",
-    art: "furniture",
-    photos: ["/images/products/dress1 (3).jpg"],
     tagline: "Cream fabric seating with dark wood legs.",
     description:
       "Soft cream armchairs and a matching sofa on tapered wood legs — comfortable everyday seating that coordinates with the same fabrics as our curtains, so the room feels designed as one piece.",
@@ -832,7 +653,7 @@ export const products = [
 export const steps = [
   {
     title: "Choose",
-    text: "Browse the collections, pick a style and color, and preview curtains in 3D.",
+    text: "Browse the collections and pick a style you love.",
   },
   {
     title: "Measure",
@@ -877,7 +698,7 @@ export const testimonials = [
 ];
 
 export const about = {
-  image: "/images/products/silk-damask.jpg", // photo beside the story
+  image: "/images/products/silk-damask.jpg",
   eyebrow: "Our story",
   title: "Good interiors are quietly the best part of a home.",
   paragraphs: [
@@ -887,9 +708,6 @@ export const about = {
   values: ["Made to measure", "Honest advice", "Tidy installation"],
 };
 
-/**
- * Before & after gallery on the home page.
- */
 export const installations = [
   {
     id: "install-curtains",
@@ -916,38 +734,16 @@ export const installations = [
     filterBefore: false,
   },
 ];
+
 /**
- * "Our Satisfied Clients" videos.
- * Put .mp4 files in public/videos/ and list them here.
- * Keep each video under ~5 MB so the page stays fast.
+ * "Our Satisfied Clients" videos (public/videos/). Loops automatically.
  */
 export const clientVideos = [
-  {
-    id: "client-5",
-    src: "/videos/client-5.mp4",
-  },
-  {
-    id: "client-6",
-    src: "/videos/client-6.mp4",
-  },
-  {
-    id: "client-7",
-    src: "/videos/client-7.mp4",
-  },
-  {
-    id: "client-1",
-    src: "/videos/client-1.mp4",
-  },
-  {
-    id: "client-2",
-    src: "/videos/client-2.mp4",
-  },
-  {
-    id: "client-3",
-    src: "/videos/client-3.mp4",
-  },
-  {
-    id: "client-4",
-    src: "/videos/client-4.mp4",
-  },
+  { id: "client-5", src: "/videos/client-5.mp4" },
+  { id: "client-6", src: "/videos/client-6.mp4" },
+  { id: "client-7", src: "/videos/client-7.mp4" },
+  { id: "client-1", src: "/videos/client-1.mp4" },
+  { id: "client-2", src: "/videos/client-2.mp4" },
+  { id: "client-3", src: "/videos/client-3.mp4" },
+  { id: "client-4", src: "/videos/client-4.mp4" },
 ];

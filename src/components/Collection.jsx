@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 import { collections, products } from "../data/siteData";
 import ProductImage from "./ProductImage";
 import Reveal from "./Reveal";
-import { Arrow, Cube } from "./Icons";
+import { Arrow } from "./Icons";
 
-function ProductCard({ product, view = 0, onOpen, onView3D }) {
-  const has3D = Boolean(product.kind); // only curtains with a fabric kind get a 3D model
+function ProductCard({ product, view = 0, onOpen }) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
@@ -40,22 +39,13 @@ function ProductCard({ product, view = 0, onOpen, onView3D }) {
         >
           View Details <Arrow width={16} height={16} />
         </button>
-        {has3D && (
-          <button
-            type="button"
-            onClick={() => onView3D(product.id)}
-            className="btn btn-ghost !px-5 !py-2.5"
-          >
-            <Cube width={16} height={16} /> View in 3D
-          </button>
-        )}
       </div>
     </motion.article>
   );
 }
 
 /** The collections, each as its own section on the page. */
-export default function Collection({ onOpen, onView3D }) {
+export default function Collection({ onOpen }) {
   return (
     <div id="collection">
       {collections.map((col, i) => {
@@ -81,7 +71,6 @@ export default function Collection({ onOpen, onView3D }) {
                     product={p}
                     view={p.photos ? 0 : idx % 3}
                     onOpen={onOpen}
-                    onView3D={onView3D}
                   />
                 ))}
               </div>

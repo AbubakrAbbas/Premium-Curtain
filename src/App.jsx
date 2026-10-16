@@ -8,7 +8,6 @@ import WhyUs from "./components/WhyUs";
 import Collection from "./components/Collection";
 import Installations from "./components/Installations";
 import ProductModal from "./components/ProductModal";
-import ViewerModal from "./components/ViewerModal";
 import HowItWorks from "./components/HowItWorks";
 import Clients from "./components/Clients";
 import About from "./components/About";
@@ -30,19 +29,11 @@ export default function App() {
   const [introActive, setIntroActive] = useState(shouldShowIntro);
   const [revealed, setRevealed] = useState(!introActive);
   const [modalProduct, setModalProduct] = useState(null);
-  const [preview, setPreview] = useState(null); // { id, color } — 3D modal
   const [interest, setInterest] = useState("");
 
   const closeModal = useCallback(() => setModalProduct(null), []);
-  const closePreview = useCallback(() => setPreview(null), []);
   const onReveal = useCallback(() => setRevealed(true), []);
   const onIntroDone = useCallback(() => setIntroActive(false), []);
-
-  // "View in 3D": open the 3D modal with that curtain selected
-  const openPreview = useCallback((id, color = 0) => {
-    setModalProduct(null);
-    setPreview({ id, color });
-  }, []);
 
   // "Request Quote": preselect the product and glide to the contact form.
   // lock: true makes the glide uninterruptible (wheel ticks can't cut it short).
@@ -50,7 +41,6 @@ export default function App() {
     setInterest(productName);
     document.body.style.overflow = "";
     setModalProduct(null);
-    setPreview(null);
     setTimeout(() => {
       const el = document.getElementById("contact");
       if (!el) return;
@@ -87,7 +77,7 @@ export default function App() {
         <main>
           <Hero ready={revealed} />
           <WhyUs />
-          <Collection onOpen={setModalProduct} onView3D={openPreview} />
+          <Collection onOpen={setModalProduct} />
           <Installations />
           <HowItWorks />
           <Clients />
@@ -105,16 +95,6 @@ export default function App() {
             product={modalProduct}
             onClose={closeModal}
             onQuote={requestQuote}
-            onView3D={openPreview}
-          />
-        )}
-        {preview && (
-          <ViewerModal
-            key="viewer"
-            productId={preview.id}
-            colorIndex={preview.color}
-            onSelect={(id, color) => setPreview({ id, color })}
-            onClose={closePreview}
           />
         )}
       </AnimatePresence>
