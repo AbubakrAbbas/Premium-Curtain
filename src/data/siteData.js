@@ -480,7 +480,7 @@ export const products = [
 
   {
     id: "matte-panel-wall",
-    name: "Designer Panel TV Wall",
+    name: "Sand Glow TV Wall",
     category: "TV Wall Design",
     art: "tvwall",
     photos: [
@@ -489,9 +489,10 @@ export const products = [
       "/images/products/tvunitextra3.webp",
       "/images/products/matte-panel-wall-2.webp",
     ],
-    tagline: "Full-height decorative panels with integrated wall lights.",
+    tagline:
+      "Soft beige slat wall with a backlit panel and a floating cream cabinet.",
     description:
-      "Full-height decorative wall panels with a subtle vertical texture, designer wall lights and a long floating console. A clean, finished backdrop for both the TV and the room — built for apartments and modern interiors.",
+      "A calm, light-toned wall that suits bedrooms and small lounges. The fine vertical slats add gentle texture, and the warm LED glow behind the TV panel makes the room feel cozy at night. The floating cabinet keeps the floor clear and gives you hidden storage.",
     fabric: "Embossed decorative panels + lacquered console",
     sizes: ["Made to measure", 'Fits screens 43" – 85"'],
     colors: [
@@ -510,7 +511,7 @@ export const products = [
 
   {
     id: "matte-panel-wall",
-    name: "Designer Panel TV Wall",
+    name: "Mocha Contrast TV Wall",
     category: "TV Wall Design",
     art: "tvwall",
     photos: [
@@ -518,9 +519,10 @@ export const products = [
       "/images/products/tvunitextra3.webp",
       "/images/products/matte-panel-wall-2.webp",
     ],
-    tagline: "Full-height decorative panels with integrated wall lights.",
+    tagline:
+      "Two-tone wood and white wall with a dark backlit panel and a black floating unit.",
     description:
-      "Full-height decorative wall panels with a subtle vertical texture, designer wall lights and a long floating console. A clean, finished backdrop for both the TV and the room — built for apartments and modern interiors.",
+      "A bold, modern design that splits the wall between warm mocha slats and clean white. The dark TV panel glows softly at the edges, and the long black cabinet below balances the look. It works well in larger living rooms.",
     fabric: "Embossed decorative panels + lacquered console",
     sizes: ["Made to measure", 'Fits screens 43" – 85"'],
     colors: [
@@ -539,16 +541,17 @@ export const products = [
 
   {
     id: "matte-panel-wall",
-    name: "Designer Panel TV Wall",
+    name: "Walnut Sconce TV Wall",
     category: "TV Wall Design",
     art: "tvwall",
     photos: [
       "/images/products/tvunitextra3.png",
       "/images/products/matte-panel-wall-2.webp",
     ],
-    tagline: "Full-height decorative panels with integrated wall lights.",
+    tagline:
+      "Grey fluted wall with twin wall lights and a long walnut floating cabinet.",
     description:
-      "Full-height decorative wall panels with a subtle vertical texture, designer wall lights and a long floating console. A clean, finished backdrop for both the TV and the room — built for apartments and modern interiors.",
+      "A premium full-wall design with grey fluted panels and a walnut side accent. Two up-down wall lights frame the TV, and the extra-long walnut cabinet gives plenty of storage. It looks especially good with wood floors.",
     fabric: "Embossed decorative panels + lacquered console",
     sizes: ["Made to measure", 'Fits screens 43" – 85"'],
     colors: [
@@ -738,7 +741,7 @@ export const products = [
 
   {
     id: "velvet-sofa",
-    name: "Velvet Sofa Set",
+    name: "Walnut Slim Dresser",
     category: "Furniture",
     art: "furniture",
     photos: [
@@ -746,9 +749,10 @@ export const products = [
       "/images/products/velvet-sofa-2.webp",
       "/images/products/velvet-sofa-3.webp",
     ],
-    tagline: "Rust-orange velvet seating with a matching bench table.",
+    tagline:
+      "Compact walnut dressing table with a tall mirror, two soft-close drawers and a matching tuck-away stool.",
     description:
-      "Deep, plush seating in a rich rust velvet — sofas styled with bolsters and scatter cushions, plus a matching upholstered bench-coffee table. Built on hardwood frames, upholstered in your choice of fabric and color.",
+      "A space-saving dresser made for smaller bedrooms. It has a full-length mirror, a small open shelf for perfume and daily items, and two smooth-glide drawers with metal handles. The stool slides under the table when you’re not using it.",
     fabric: "Hardwood frame, high-resilience foam",
     sizes: ["Standard 220 cm", "Made to any width"],
     colors: [
@@ -760,7 +764,7 @@ export const products = [
     features: [
       "Fabric and color of your choice",
       "Solid hardwood frame",
-      "Bench-coffee table to match",
+      "Tuck-away stool to match",
       "Delivered and placed by our team",
     ],
     care: "Vacuum weekly; spot-clean with a damp cloth and mild soap.",
@@ -768,7 +772,7 @@ export const products = [
 
   {
     id: "velvet-sofa",
-    name: "Velvet Sofa Set",
+    name: "Oak Arc Vanity",
     category: "Furniture",
     art: "furniture",
     photos: [
@@ -776,9 +780,10 @@ export const products = [
       "/images/products/velvet-sofa-2.webp",
       "/images/products/velvet-sofa-3.webp",
     ],
-    tagline: "Rust-orange velvet seating with a matching bench table.",
+    tagline:
+      "RLight oak vanity with a round gold-framed mirror and a cushioned cream stool.",
     description:
-      "Deep, plush seating in a rich rust velvet — sofas styled with bolsters and scatter cushions, plus a matching upholstered bench-coffee table. Built on hardwood frames, upholstered in your choice of fabric and color.",
+      "A soft, calm vanity with a warm oak finish and slim tapered legs. The fluted drawer fronts add a bit of texture, and the large round mirror makes the room feel brighter. The padded stool is comfortable for longer getting-ready sessions.",
     fabric: "Hardwood frame, high-resilience foam",
     sizes: ["Standard 220 cm", "Made to any width"],
     colors: [
@@ -790,7 +795,7 @@ export const products = [
     features: [
       "Fabric and color of your choice",
       "Solid hardwood frame",
-      "Bench-coffee table to match",
+      "Cushioned cream stool to match",
       "Delivered and placed by our team",
     ],
     care: "Vacuum weekly; spot-clean with a damp cloth and mild soap.",
@@ -798,7 +803,7 @@ export const products = [
 
   {
     id: "velvet-sofa",
-    name: "Velvet Sofa Set",
+    name: "Espresso Glam Dresser",
     category: "Furniture",
     art: "furniture",
     photos: [
@@ -806,9 +811,10 @@ export const products = [
       "/images/products/velvet-sofa-2.webp",
       "/images/products/velvet-sofa-3.webp",
     ],
-    tagline: "Rust-orange velvet seating with a matching bench table.",
+    tagline:
+      "Dark espresso dresser with an LED-lit mirror, seven drawers and a tufted stool.",
     description:
-      "Deep, plush seating in a rich rust velvet — sofas styled with bolsters and scatter cushions, plus a matching upholstered bench-coffee table. Built on hardwood frames, upholstered in your choice of fabric and color.",
+      "A statement dresser with plenty of storage. It has a wide mirror with built-in lights for even, bright makeup, and a roomy top for your products. The seven drawers keep everything organized, and the tufted stool rolls out on wheels and tucks back underneath.",
     fabric: "Hardwood frame, high-resilience foam",
     sizes: ["Standard 220 cm", "Made to any width"],
     colors: [
@@ -820,7 +826,7 @@ export const products = [
     features: [
       "Fabric and color of your choice",
       "Solid hardwood frame",
-      "Bench-coffee table to match",
+      "Tufted stool to match",
       "Delivered and placed by our team",
     ],
     care: "Vacuum weekly; spot-clean with a damp cloth and mild soap.",
